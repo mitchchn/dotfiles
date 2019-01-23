@@ -1,13 +1,16 @@
 set -x PATH $HOME/anaconda3/bin $HOME/go/bin $PATH
 
-set PRIVATE_CONFIG_FILE = $HOME/.config/fish/config.private.fish
-if test -e $PRIVATE_CONFIG_FILE
-    source $PRIVATE_CONFIG_FILE
-end
+# aliases
+set ALIASES_FILE "$HOME/.config/fish/aliases.fish"
+test -f $ALIASES_FILE; and source $ALIASES_FILE
 
-if type -q code-insiders
-    alias code="code-insiders"
-end
+# private config file (not synced to git)
+set PRIVATE_CONFIG_FILE "$HOME/.config/fish/config.private.fish"
+test -f $PRIVATE_CONFIG_FILE; and source $PRIVATE_CONFIG_FILE
+
+# private aliases
+set PRIVATE_ALIASES_FILE "$HOME/.config/fish/aliases.private.fish"
+test -f $PRIVATE_ALIASES_FILE; and source $PRIVATE_ALIASES_FILE
 
 ### Spacefish
 # Options: https://github.com/matchai/spacefish/blob/master/docs/Options.md
