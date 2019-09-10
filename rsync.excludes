@@ -1,0 +1,4 @@
+.git
+/rsync.excludes
+/README.md
+/install.sh
