@@ -9,4 +9,4 @@ set PATH $HOME/go/bin $PATH
 alias code code-insiders
 
 # PROMPT #
-source ("/Users/mitchell/.cargo/bin/starship" init fish --print-full-init | psub)
+source ("$HOME/.cargo/bin/starship" init fish --print-full-init | psub)
