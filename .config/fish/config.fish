@@ -20,11 +20,11 @@ end
 function fish_prompt
     set duration (math -s6 "$CMD_DURATION / 1000")
     eval powerline-go \
-        -hostname-only-if-ssh \
-        -cwd-max-depth 2 \
-        -modules "host,ssh,cwd,perms,git,jobs,exit,root,duration" \
+        -cwd-max-depth 3 \
+#-hostname-only-if-ssh \
+        -modules "venv,ssh,cwd,perms,git,jobs,exit,duration" \
         -duration $duration \
         -duration-min 5 \
-        -condensed \
+				-newline \
         -shell bare
 end
