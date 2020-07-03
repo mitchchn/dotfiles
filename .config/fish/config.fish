@@ -5,6 +5,8 @@ source $HOME/.cargo/env
 set GOPATH $HOME/go
 set PATH $HOME/go/bin $PATH
 
+set PATH $HOME/.local/bin $PATH
+
 # ALIASES #
 
 if type -q code-insiders
