@@ -13,6 +13,14 @@ if type -q code-insiders
     alias code code-insiders
 end
 
+if type -q exa
+    alias ls exa
+end
+
+if type -q bat
+    alias cat bat
+end
+
 #### PROMPT ####
 
 # Starship
@@ -23,10 +31,9 @@ function fish_prompt
     set duration (math -s6 "$CMD_DURATION / 1000")
     eval powerline-go \
         -cwd-max-depth 3 \
-#-hostname-only-if-ssh \
         -modules "venv,ssh,cwd,perms,git,jobs,exit,duration" \
         -duration $duration \
         -duration-min 5 \
-				-newline \
+	-newline \
         -shell bare
 end
